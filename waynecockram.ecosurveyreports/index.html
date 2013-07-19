@@ -5,20 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta http-equiv="Pragma" content="no-cache">
-        <!-- the line below is required for access to the appMobi JS library -->
-        <script type="text/javascript" charset="utf-8" src="js/appmobi.js"></script>
-		<script type="text/javascript" language="javascript">
-			// This event handler is fired once the AppMobi libraries are ready
-        	function onDeviceReady() {
-            	//use AppMobi viewport to handle device resolution differences if you want
-            	//AppMobi.display.useViewport(768,1024);
-
-            	//hide splash screen now that our app is ready to run
-            	AppMobi.device.hideSplashScreen();
-        	}	
-        	//initial event handler to detect when appMobi is ready to roll
-        	document.addEventListener("appMobi.device.ready",onDeviceReady,false);
-		</script> 
+		<script type="text/javascript" charset="utf-8" src="http://localhost:58888/_appMobi/appmobi.js"></script>
+        <script type="text/javascript" charset="utf-8" src="http://localhost:58888/_appMobi/xhr.js"></script>
+		<link href="css/icons.css" rel="stylesheet" type="text/css">
+        <link href="css/af.ui.css" rel="stylesheet" type="text/css">
+      
         <script type="text/javascript" language="javascript">
             // This event handler is fired once the AppMobi libraries are ready
             function onDeviceReady() {
@@ -34,7 +25,8 @@
 
             //initial event handler to detect when appMobi is ready to roll
             document.addEventListener("appMobi.device.ready", onDeviceReady, false);
-        </script> 
+        </script>
+		
         <script src="js/appframework.ui.min.js"></script>
         <script>
             $.ui.autoLaunch = false;
@@ -56,10 +48,6 @@
                 $("#" + divId2).toggle();
             };
         </script>
-		    
-        <link href="css/icons.css" rel="stylesheet" type="text/css">
-        <link href="css/af.ui.css" rel="stylesheet" type="text/css">
-        <link href="css/buttons.css" rel="stylesheet" type="text/css">
     </head>
     <body>
         <div id="afui" class="af">
